@@ -1,0 +1,189 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #dedede;
+}
+
+form {
+  width: 400px;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px #00000090;
+}
+
+form image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+}
+
+form h3 {
+  font-size: 24px;
+  line-height: 28px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+form .input-container {
+  height: 70px;
+  width: 100%;
+  position: relative;
+  margin-bottom: 16px;
+}
+
+form .input-container input {
+  width: 100%;
+  height: 50px;
+  background-color: #47474720;
+  border-radius: 5px;
+  padding-left: 16px;
+  position: absolute;
+  bottom: 0;
+  transition-duration: 200ms;
+  border: 2px solid transparent;
+}
+
+form .input-container input:focus {
+  border-color: blueviolet;
+}
+
+form .input-container label {
+  font-size: 16px;
+  position: absolute;
+  line-height: 20px;
+  bottom: 15px;
+  left: 16px;
+  transition-duration: 200ms;
+}
+
+form .input-container input::placeholder {
+  color: transparent;
+  transition-duration: 200ms;
+  font-weight: bold;
+}
+
+form .input-container input:focus::placeholder {
+  color: #47474750;
+}
+
+form .input-container input:focus + label,
+form .input-container input:valid + label {
+  bottom: 50px;
+  left: 0;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+form button {
+  width: 150px;
+  height: 50px;
+  background-color: blueviolet;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  margin: 0 auto;
+  display: block;
+  transition-duration: 200ms;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+form button::after {
+  content: "";
+  width: 180px;
+  height: 180px;
+  background-image: linear-gradient(blueviolet, white);
+  position: absolute;
+  left: -15px;
+  top: -65px;
+  animation: giroBG linear infinite 2s;
+}
+
+form button::before {
+  content: "";
+  width: 144px;
+  height: 44px;
+  background-color: #ffffff;
+  border-radius: 3px;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  z-index: 1;
+}
+
+form button:hover {
+  background-color: purple;
+}
+
+form button span {
+  position: relative;
+  z-index: 2;
+  color: blueviolet;
+  animation: arcoiris linear infinite 2s;
+}
+
+@keyframes balanco {
+  0% {
+    transform: translateX(-20%);
+    bottom: 20px;
+  }
+  25% {
+    bottom: -25px;
+  }
+  75% {
+    bottom: 20px;
+  }
+  100% {
+    transform: translateX(20%);
+    bottom: -25px;
+  }
+}
+
+@keyframes giroBG {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes arcoiris {
+  15% {
+    color: orange;
+  }
+  30% {
+    color: yellow;
+  }
+  45% {
+    color: greenyellow;
+  }
+  
+  60% {
+    color: green;
+  }
+  75% {
+    color: blue;
+  }
+  90% {
+    color: blueviolet;
+  }
+
+  100% {
+    color: #30045b;
+  }
+}
