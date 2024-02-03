@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="pt-BR">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade de Array Methods e String Methods - Formatação de Data e Hora</title>
+</head>
+
+<body>
+
+    <h1>Considere esta variável: '2024-01-03 13:10:00':</h1>
+    <h3>1. Utilize alguma função para retornar a data formatada da seguinte maneira: 03/01/2023;</h3>
+    <h3>2. Utilize alguma função para retornar apenas a hora: 13:10;</h3>
+    <br>
+    <button onclick="getDataFormatada()">Mostrar respostas</button>
+
+    <script>
+        function getDataFormatada() {
+            let data = '2024-01-03 13:10:00';
+
+            // Formatação da data
+            let dataFormatada = new Date(data).toLocaleDateString('pt-BR');
+
+            // Extração da hora
+            let hora = new Date(data).toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' });
+
+            alert('Data formata: ' + dataFormatada);
+            alert('Hora formatada: ' + hora);
+        }
+    </script>
+</body>
+
+</html>

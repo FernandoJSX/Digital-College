@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="pt-BR">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade de Array Methods e String Methods - Array de caracteres</title>
+</head>
+
+<body>
+
+    <h1>Considere este array ['um', 'dois', 'tres', 'quatro', 'cinco', 'seis', 'sete'. 'oito', 'nove', 'dez'];, com base
+        nele:</h1>
+    <h3>1. Utilize alguma função para gerar um novo array onde os valores do array será o número de letras de cada
+        palavra dentro do array original;</h3>
+    <h3>2. Utilize alguma função para gerar um novo array com apenas as palavras que possuem encontros de vogais;</h3>
+    <h3>3. Utilize alguma função para reordenar em ordem crescente este array com base no número de letras de cada
+        palavra;</h3>
+    <br>
+    <button onclick="getOrdemPeloNumeroLetras()">Mostrar respostas</button>
+
+    <script>
+        function getOrdemPeloNumeroLetras() {
+            let words = ['um', 'dois', 'tres', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
+            let newArray1 = words.map(word => word.length);
+            let newArray2 = words.filter(word => /[aeiou]{2,}/i.test(word));
+            let newArray3 = words.slice().sort((a, b) => a.length - b.length);
+            alert("Número de letras de cada palavra: " + newArray1);
+            alert("Palavras com encontros de vogais: " + newArray2);
+            alert("Palavras em ordem crescente pelo número de letras: " + newArray3);
+        }
+    </script>
+</body>
+
+</html>

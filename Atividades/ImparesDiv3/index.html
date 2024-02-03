@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="pt-BR">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade de Array Methods e String Methods - Números Ímpares e Divisíveis por 3</title>
+</head>
+<body>
+
+    <h1>Considere este array: [1,2,3,4,5,6,7,8,9,10], com base nele:</h1>
+    <h3>1. Utilize uma função que retorne apenas os números ímpares;</h3>
+    <h3>2. Com este resultado em mãos, retorne apenas os números divisíveis por 3</h3>
+    <br>
+    <button onclick="getNumerosImparesEDiv3()">Calcular o resultado</button>
+
+    <script>
+        function getNumerosImparesEDiv3(){
+            let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+            let result = numbers.filter(num => num % 2 !== 0).filter(oddNum => oddNum % 3 === 0).toString();
+            alert("Resultado: " + result);
+        }
+    </script>
+</body>
+</html>
