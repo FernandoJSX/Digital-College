@@ -13,7 +13,7 @@ const Ways = () => {
                     <Route path={"/sobre"} element={<PageSobre />} />
                     <Route path={"/*"} element={<PageNotFound />} />
                 </Route>
-            </Routes>
+            </Routes>cd 
         </BrowserRouter>
     );
 }
